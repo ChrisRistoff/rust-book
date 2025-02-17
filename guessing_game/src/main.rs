@@ -17,10 +17,9 @@ fn main() {
 
     let random_number = rand::rng().random_range(1..=100);
 
-    if guess == random_number {
-        println!("You win");
-    } else {
-        println!("You lose");
+    match guess == random_number {
+        true => { println!("You win") }
+        false => { println!("You lose") }
     }
 
     println!("Random number was {}", random_number);
