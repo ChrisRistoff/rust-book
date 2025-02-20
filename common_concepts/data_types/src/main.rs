@@ -1,9 +1,34 @@
 fn main() {
-    let mut whater: i8 = 127;
+}
 
-    whater += 1;
+fn _overflow(number: u8) -> u8 {
+    return number.wrapping_add(20);
+    // if it overflows it will start from 0 where it overflows and continue
+}
 
-    println!("{}", whater);
+fn _array(arr : [u8; 5]) -> () {
+    println!("Please enter an array index");
+
+    let mut index = String::new();
+
+    std::io::stdin()
+        .read_line(&mut index)
+        .expect("Failed to read line");
+
+    let index: usize = index
+        .trim()
+        .parse()
+        .expect("Please enter a valid number");
+
+    let array_length = arr.len();
+
+    if index > array_length {
+        println!("Index out of range, lenght of array is {array_length}");
+
+        return;
+    }
+
+    println!("The value of the index is {}", arr[index]);
 }
 
 fn _fizz_buzz() -> () {
@@ -12,6 +37,7 @@ fn _fizz_buzz() -> () {
         (5, "Buzz"),
         (7, "Bazz"),
         (9, "Bezz"),
+        (12, "Bozz"),
         (12, "Bozz"),
     ];
 
