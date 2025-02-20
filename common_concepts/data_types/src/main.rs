@@ -1,6 +1,14 @@
 fn main() {
 }
 
+fn _expression() -> u8 {
+    let x = 3;
+    x+1
+
+    // will return the value due to mising ;
+    // seems confusing, rather return...
+}
+
 fn _overflow(number: u8) -> u8 {
     return number.wrapping_add(20);
     // if it overflows it will start from 0 where it overflows and continue
