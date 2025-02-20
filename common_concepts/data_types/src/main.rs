@@ -1,4 +1,28 @@
 fn main() {
+    _loops();
+}
+
+fn _loops() -> () {
+    let mut counter: u8 = 0;
+    loop {
+        counter += 1;
+        println!("woop {counter}");
+
+        if counter == 10 {
+            break;
+        }
+    } // infinite loop;
+
+    let mut counter: u8 = 0;
+    let res = loop {
+        counter += 1;
+
+        if counter == 100 {
+            break counter + 100; // break is similar to return in this case, semicolon is optional.
+        }
+    };
+
+    println!("Counter is {res}");
 }
 
 fn _expression() -> u8 {
