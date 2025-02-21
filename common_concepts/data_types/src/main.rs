@@ -1,5 +1,9 @@
 fn main() {
     _loops();
+    println!("{}", _expression());
+    println!("{}", _overflow(255));
+    _array([1, 2, 3, 4, 5]);
+    _fizz_buzz();
 }
 
 fn _loops() -> () {

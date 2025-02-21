@@ -1,0 +1,1 @@
+/home/krasen/programming/rust-book/random_stuff/target/debug/random_stuff: /home/krasen/programming/rust-book/random_stuff/src/main.rs /home/krasen/programming/rust-book/random_stuff/src/password_gen.rs
